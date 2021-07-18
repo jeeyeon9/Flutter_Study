@@ -34,7 +34,7 @@ class _SecondscreenState extends State<Secondscreen> {
         leading: IconButton(
           onPressed: (){
             Navigator.of(context).pop();
-          },
+          },//주석을 달아본다
           icon : Icon(Icons.arrow_back,color:Colors.black)
 
         )

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:new01/new_screen.dart';
 import 'package:new01/new_screen2.dart';
-
+import 'package:new01/new_screen3.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -26,9 +26,9 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.purple,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Flutter Homework'),
     );
   }
 }
@@ -92,25 +92,35 @@ String name = '어쩌고';
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-            '안녕하세'  ),
-            Text(
-              '_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-            IconButton(onPressed: (){
-              print(name);
-              Navigator.of(context).push(MaterialPageRoute(builder: (_)=>Secondscreen(name)));
-
-            }, icon: Text('버튼'
-            ))
+            const
+            Text('공지사항',style:TextStyle(fontSize: 20,color: Colors.grey)),
+            IconButton(
+                onPressed:()
+                {
+                  print(name);
+                  Navigator.of(context).push(MaterialPageRoute(builder: (_)=>Homeworkone(name)));
+                },
+                icon:Icon(Icons.all_inbox),
+                iconSize: 50,
+                color : Colors.deepPurple),
+            Container(height: 30),
+            Text('마이페이지',style:TextStyle(fontSize: 20,color: Colors.grey)),
+            IconButton(
+                onPressed:()
+                {
+               print(name);
+               Navigator.of(context).push(MaterialPageRoute(builder: (_)=>Secondscreen(name)));
+                },
+                icon:Icon(Icons.account_circle),
+                iconSize: 50,
+                color : Colors.deepPurple)
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
-        child: const Icon(Icons.accessibility_new_outlined),
+        child: const Icon(Icons.email),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }

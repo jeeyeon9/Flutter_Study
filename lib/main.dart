@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:new01/new_screen.dart';
 import 'package:new01/new_screen2.dart';
 import 'package:new01/new_screen3.dart';
+import 'package:new01/new_screen4.dart';
+
+import 'member_screen.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -103,6 +106,11 @@ String name = '어쩌고';
                 icon:Icon(Icons.all_inbox),
                 iconSize: 50,
                 color : Colors.deepPurple),
+            IconButton(onPressed: (){
+              print(name);
+              Navigator.of(context).push(MaterialPageRoute(builder: (_) => MemberScreen()));
+              }, icon: Text("멤버스크린")),
+
             Container(height: 30),
             Text('마이페이지',style:TextStyle(fontSize: 20,color: Colors.grey)),
             IconButton(

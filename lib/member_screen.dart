@@ -37,7 +37,8 @@ class _MemberScreenState extends State<MemberScreen> {
     );
   }
   Widget getMemberInformation(String name, String introduce){
-    return
+    return getMemberInformation('누구누구', '뭐라고?'
+    );
 
   }
 

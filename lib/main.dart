@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:new01/Thursday_Screen.dart';
 import 'package:new01/new_screen.dart';
 import 'package:new01/new_screen2.dart';
 import 'package:new01/new_screen3.dart';
 import 'package:new01/new_screen4.dart';
-
 import 'member_screen.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -117,11 +118,18 @@ String name = '어쩌고';
                 onPressed:()
                 {
                print(name);
-               Navigator.of(context).push(MaterialPageRoute(builder: (_)=>Secondscreen(name)));
+               Navigator.of(context).push(MaterialPageRoute(builder: (_)=>thursdayScreen()));
+                },
+                icon:Text('목요일')),
+            IconButton(
+                onPressed:()
+                {
+                  print(name);
+                  Navigator.of(context).push(MaterialPageRoute(builder: (_)=>NotiScreen()));
                 },
                 icon:Icon(Icons.account_circle),
                 iconSize: 50,
-                color : Colors.deepPurple)
+                color : Colors.deepPurple),
           ],
         ),
       ),
